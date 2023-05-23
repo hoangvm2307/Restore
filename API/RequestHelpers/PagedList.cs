@@ -1,6 +1,4 @@
-using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace API.RequestHelpers
 {
@@ -17,7 +15,6 @@ namespace API.RequestHelpers
             };
             AddRange(items);
         }
-
         public MetaData MetaData { get; set; }
 
         public static async Task<PagedList<T>> ToPagedList(IQueryable<T> query, int pageNumber, int pageSize)
